@@ -1,0 +1,31 @@
+"*":
+  "block-cursor":
+    global:
+      blinkOff:
+        backgroundColor: "#ffffff"
+  "bracket-matcher":
+    autocompleteBrackets: false
+  core:
+    audioBeep: false
+    closeEmptyWindows: false
+    destroyEmptyPanes: false
+    disabledPackages: [
+      "block-cursor"
+      "swackets"
+      "rainbow-delimiters"
+    ]
+    telemetryConsent: "no"
+    themes: [
+      "atom-light-ui"
+      "michiel-syntax"
+    ]
+    titleBar: "hidden"
+  editor:
+    fontFamily: "Comic Sans MS"
+    fontSize: 20
+    showLineNumbers: false
+    tabLength: 4
+  "exception-reporting":
+    userId: "60221d56-4651-4470-b889-a5ea334c7900"
+  welcome:
+    showOnStartup: false
