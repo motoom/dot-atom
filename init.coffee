@@ -10,8 +10,6 @@
 #   editor.onDidSave ->
 #     console.log "Saved! #{editor.getPath()}"
 
-# alert('hi')
-
 # https://discuss.atom.io/t/toggle-line-numbers/7233/5
 atom.commands.add 'atom-text-editor:not([mini])', 'line-numbers:toggle', ->
     lineNumbersShowing = atom.config.get('editor.showLineNumbers')

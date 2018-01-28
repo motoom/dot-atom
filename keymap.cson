@@ -28,10 +28,38 @@
 # This file uses CoffeeScript Object Notation (CSON).  http://flight-manual.atom.io/using-atom/sections/basic-customization/#_cson
 
 '.editor':
-  'f5': 'line-numbers:toggle'
+  'f1': 'line-numbers:toggle'
+
   # fn-up, fn-down
   'alt-pageup': 'core:page-up'
   'alt-pagedown': 'core:page-down'
 
   'alt-up': 'core:page-up'
   'alt-down': 'core:page-down'
+
+# Use F3 instead of F2 for bookmarks.
+'.platform-darwin atom-text-editor':
+    'cmd-f3': 'bookmarks:toggle-bookmark'
+    'shift-cmd-f3': 'bookmarks:clear-bookmarks'
+
+'atom-text-editor':
+    'f3': 'bookmarks:jump-to-next-bookmark'
+    'shift-f3': 'bookmarks:view-all'
+    'cmd-r': 'script:run'
+    'shift-cmd-r': 'symbols-view:toggle-file-symbols'
+
+'atom-text-editor[data-grammar="text html basic"]:not([mini]), atom-text-editor[data-grammar~="erb"]:not([mini]), atom-text-editor[data-grammar~="jade"]:not([mini]), atom-text-editor[data-grammar~="css"]:not([mini]), atom-text-editor[data-grammar~="stylus"]:not([mini]), atom-text-editor[data-grammar~="sass"]:not([mini]), atom-text-editor[data-grammar~="scss"]:not([mini])':
+  'tab': 'emmet:expand-abbreviation-with-tab'
+
+'.platform-darwin':
+  'control-cmd-R': 'symbols-view:toggle-project-symbols'
+
+# clojure lisp-paredit
+# Provides proper indentation when enter is pressed
+'atom-text-editor[data-grammar~="clojure"]':
+  'enter': 'lisp-paredit:newline'
+
+# Override newline back to original when in Proto-REPL console
+# GitHub Issue: https://github.com/jonspalding/lisp-paredit/issues/26
+'ink-console atom-text-editor[data-grammar~="clojure"]':
+  'enter': 'editor:newline'

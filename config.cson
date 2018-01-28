@@ -1,4 +1,7 @@
 "*":
+  "autocomplete-python":
+    triggerCompletionRegex: "([. ]|[a-zA-Z_][a-zA-Z0-9_]*)"
+    useKite: false
   "block-cursor":
     global:
       blinkOff:
@@ -12,7 +15,13 @@
     disabledPackages: [
       "block-cursor"
       "swackets"
+      "spell-check"
+      "emmet"
       "rainbow-delimiters"
+      "autocomplete-python"
+    ]
+    packagesWithKeymapsDisabled: [
+      "lisp-paredit"
     ]
     telemetryConsent: "no"
     themes: [
@@ -22,10 +31,40 @@
     titleBar: "hidden"
   editor:
     fontFamily: "Comic Sans MS"
-    fontSize: 20
+    fontSize: 17
     showLineNumbers: false
     tabLength: 4
+    tabType: "soft"
   "exception-reporting":
     userId: "60221d56-4651-4470-b889-a5ea334c7900"
+  "graphviz-preview-plus": {}
+  "linter-flake8":
+    hangClosing: true
+    ignoreErrorCodes: [
+      "E501"
+      "E128"
+    ]
+  "linter-ui-default":
+    panelHeight: 244
+    showPanel: true
+  "lisp-paredit":
+    enabled: false
+    strict: false
+  pigments:
+    autocompleteSuggestionsFromValue: true
+    markerType: "gutter"
+  "proto-repl":
+    leinPath: "/usr/local/bin/lein"
+    showInlineResults: false
+  "toggle-gutter":
+    showGutters: false
+  "webbox-color":
+    fillColorAsBackground: false
   welcome:
     showOnStartup: false
+".python.source":
+  editor:
+    showInvisibles: false
+".source.sql":
+  editor:
+    showInvisibles: true
