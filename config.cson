@@ -19,6 +19,16 @@
       "emmet"
       "rainbow-delimiters"
       "autocomplete-python"
+      "language-gfm"
+      "proto-repl-charts"
+      "proto-repl"
+      "lisp-paredit"
+      "parinfer"
+      "busy-signal"
+      "tool-bar"
+      "ink"
+      "github"
+      "intentions"
     ]
     packagesWithKeymapsDisabled: [
       "lisp-paredit"
@@ -31,13 +41,14 @@
     titleBar: "hidden"
   editor:
     fontFamily: "Comic Sans MS"
-    fontSize: 17
+    fontSize: 20
     showLineNumbers: false
     tabLength: 4
     tabType: "soft"
   "exception-reporting":
     userId: "60221d56-4651-4470-b889-a5ea334c7900"
   "graphviz-preview-plus": {}
+  linter: {}
   "linter-flake8":
     hangClosing: true
     ignoreErrorCodes: [
@@ -45,19 +56,29 @@
       "E128"
     ]
   "linter-ui-default":
-    panelHeight: 244
+    alwaysTakeMinimumSpace: true
+    decorateOnTreeView: "Files and Directories"
+    gutterPosition: "Left"
+    panelHeight: 176
+    panelRepresents: "Entire Project"
     showPanel: true
+    showTooltip: false
+    useBusySignal: false
   "lisp-paredit":
     enabled: false
     strict: false
+  "markdown-preview": {}
   pigments:
     autocompleteSuggestionsFromValue: true
     markerType: "gutter"
   "proto-repl":
+    inkConsole: false
     leinPath: "/usr/local/bin/lein"
-    showInlineResults: false
   "toggle-gutter":
     showGutters: false
+  "tool-bar":
+    fullWidth: false
+    iconSize: "12px"
   "webbox-color":
     fillColorAsBackground: false
   welcome:
