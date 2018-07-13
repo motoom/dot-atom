@@ -1,4 +1,8 @@
 "*":
+  "atom-html-preview":
+    scrollToCursor: true
+  "autocomplete-plus":
+    enableAutoActivation: false
   "autocomplete-python":
     triggerCompletionRegex: "([. ]|[a-zA-Z_][a-zA-Z0-9_]*)"
     useKite: false
@@ -8,6 +12,7 @@
         backgroundColor: "#ffffff"
   "bracket-matcher":
     autocompleteBrackets: false
+    wrapSelectionsInBrackets: false
   core:
     audioBeep: false
     closeEmptyWindows: false
@@ -29,6 +34,9 @@
       "ink"
       "github"
       "intentions"
+      "linter-flake8"
+      "diff-pane"
+      "wrap-guide"
     ]
     packagesWithKeymapsDisabled: [
       "lisp-paredit"
@@ -40,8 +48,9 @@
     ]
     titleBar: "hidden"
   editor:
+    autoIndentOnPaste: false
     fontFamily: "Comic Sans MS"
-    fontSize: 20
+    fontSize: 19
     showLineNumbers: false
     tabLength: 4
     tabType: "soft"
@@ -61,7 +70,6 @@
     gutterPosition: "Left"
     panelHeight: 176
     panelRepresents: "Entire Project"
-    showPanel: true
     showTooltip: false
     useBusySignal: false
   "lisp-paredit":
@@ -71,9 +79,15 @@
   pigments:
     autocompleteSuggestionsFromValue: true
     markerType: "gutter"
+  "prettier-atom":
+    formatOnSaveOptions: {}
+    prettierOptions: {}
+    useEslint: true
   "proto-repl":
     inkConsole: false
     leinPath: "/usr/local/bin/lein"
+  "terminal-tab":
+    fontFamily: "Monaco"
   "toggle-gutter":
     showGutters: false
   "tool-bar":
@@ -83,6 +97,14 @@
     fillColorAsBackground: false
   welcome:
     showOnStartup: false
+".js.source":
+  editor:
+    commentStart: "// "
+    decreaseIndentPattern: "(?x) ^ \\s* (\\s* /[*] .* [*]/ \\s*)* [\\])]"
+    explanation: "You can add extra conditions for Atom to change the indent level in your config.cson file, following the lead of the packages that define those conditions in the first place. Add the following to the top level of config.cson and Atom will automatically add a level of indentation after a line that matches the regular expression ifs*(.*)$. If you already have a .source.js entry, make sure to change that instead of just pasting this bit in. https://github.com/atom/language-javascript/blob/master/settings/language-javascript.cson  https://stackoverflow.com/questions/46905643/changing-indentation-style-in-atom-editor-javascript-code"
+    foldEndPattern: "^\\s*\\}|^\\s*\\]|^\\s*\\)"
+    increaseIndentPattern: "(?x) \\{ [^}\"']* $ | \\[ [^\\]\"']* $ | \\( [^)\"']* $"
+    nonWordCharacters: "/\\()\"':,.;<>~!#@%^&*|+=[]{}`?-…"
 ".python.source":
   editor:
     showInvisibles: false
